@@ -74,12 +74,12 @@ def test_citizen_snapshot_hides_ops_feed(client):
     assert "not shown" in pic["note"].lower()
 
 
-def test_demo_t7_marks_isolation_and_t5_checkin_visibility(client):
+def test_demo_t4_marks_isolation_and_t3_checkin_visibility(client):
     ops = _auth(client, "ops@demo")
-    for _ in range(7):
+    for _ in range(4):
         assert client.post("/api/v1/demo/tick", headers=ops).status_code == 200
     snap = client.get("/api/v1/ops/snapshot", headers=ops).json()
-    assert snap["tick"] == 7
+    assert snap["tick"] == 4
     assert snap["incidents"]
     assert snap["incidents"][0]["isolated"] is True
     assert snap["isolation"]["isolated_settlements"]

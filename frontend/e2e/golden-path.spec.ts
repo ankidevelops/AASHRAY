@@ -26,7 +26,7 @@ test("golden path: login, SOS, fusion sitrep, clock isolation, assign", async ({
   await expect(page.getByText(/PRECOMPUTED|precomputed/i).first()).toBeVisible();
   await expect(page.getByText(/SIMULATED/i).first()).toBeVisible();
 
-  for (let i = 1; i <= 7; i += 1) {
+  for (let i = 1; i <= 4; i += 1) {
     const tickWait = page.waitForResponse(
       (r) => r.url().includes("/demo/tick") && r.request().method() === "POST" && r.ok(),
     );

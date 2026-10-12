@@ -54,7 +54,7 @@
       }
     ]
   },
-  "5": {
+  "3": {
     "checkins": [
       {
         "status": "safe",
@@ -63,7 +63,7 @@
       }
     ]
   },
-  "7": {
+  "4": {
     "blocked_edges": [
       {
         "edge_id": "edge-14",
